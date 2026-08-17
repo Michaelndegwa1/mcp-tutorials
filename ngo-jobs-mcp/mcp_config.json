@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "ngo-jobs": {
+      "command": "C:\\Users\\ADMIN\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "args": [
+        "server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "E:/mcp tutorials/ngo-jobs-mcp"
+      }
+    }
+  }
+}
