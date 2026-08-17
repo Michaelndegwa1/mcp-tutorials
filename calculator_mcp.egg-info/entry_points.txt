@@ -1,0 +1,2 @@
+[console_scripts]
+calculator-mcp = calculator_mcp.server:main

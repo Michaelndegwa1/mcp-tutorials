@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: calculator-mcp
+Version: 0.1.0
+Summary: A Model Context Protocol (MCP) server for mathematical calculations
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: mcp[cli]>=1.2.0
+Requires-Dist: sympy>=1.12
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+
+# Calculator MCP Server (Python)
+
+A feature-rich **Model Context Protocol (MCP)** server for mathematical calculations, scientific functions, unit conversions, financial metrics, and statistical analysis.
+
+Built with Python 3.10+, the official `mcp` SDK (`FastMCP`), and `sympy`.
+
+---
+
+## 🚀 Features & Exposed Tools
+
+- **`evaluate_math_expression`**: Evaluates custom mathematical expressions safely using SymPy (e.g. `2 * (3 + 4)`, `sqrt(144) + sin(pi / 2)`, `log(100, 10)`, `5^3`).
+- **`perform_arithmetic`**: Basic arithmetic (`add`, `subtract`, `multiply`, `divide`) on arrays of numbers.
+- **`scientific_calculation`**: Powers, roots (`sqrt`, `cbrt`), factorials, logarithms (`log`, `ln`), and trigonometric functions (`sin`, `cos`, `tan`).
+- **`convert_unit`**: Physical unit conversions (Length, Mass/Weight, Temperature, Volume, Time).
+- **`financial_calculator`**: Simple interest, Compound interest, Loan EMI calculations, and Percentages.
+- **`calculate_statistics`**: Summary statistics (`mean`, `median`, `mode`, `variance`, `stdev`, `summary`).
+
+---
+
+## 📦 Installation & Setup
+
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   # Or editable install:
+   pip install -e .
+   ```
+
+2. **Run Automated Unit Tests**:
+   ```bash
+   pytest
+   ```
+
+---
+
+## 🔍 Testing via Web Interface (MCP Inspector)
+
+You can launch the official Model Context Protocol interactive Web Inspector UI to visually test all tools in your browser:
+
+### Option 1: Using Python MCP CLI (Recommended)
+```bash
+mcp dev calculator_mcp/server.py
+```
+
+### Option 2: Using Node NPX
+```bash
+npx @modelcontextprotocol/inspector@0.4.1 python -m calculator_mcp.server
+```
+
+Once launched, open **[http://localhost:5173](http://localhost:5173)** in your browser to inspect server tools, schemas, and execute calculations interactively.
+
+---
+
+## ⚙️ Registration in Antigravity / Claude Desktop
+
+Add the following block to your `mcp_config.json` (or `claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "calculator": {
+      "command": "python",
+      "args": [
+        "-m",
+        "calculator_mcp.server"
+      ],
+      "env": {
+        "PYTHONPATH": "e:/mcp tutorials"
+      }
+    }
+  }
+}
+```

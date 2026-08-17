@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "calculator": {
+      "command": "C:\\Users\\ADMIN\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "args": [
+        "-m",
+        "calculator_mcp.server"
+      ],
+      "env": {
+        "PYTHONPATH": "E:/mcp tutorials"
+      }
+    }
+  }
+}

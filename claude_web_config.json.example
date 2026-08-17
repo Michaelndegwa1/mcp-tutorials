@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "calculator-web": {
+      "serverUrl": "http://localhost:8000/sse"
+    }
+  }
+}

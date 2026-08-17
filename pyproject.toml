@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculator-mcp"
+version = "0.1.0"
+description = "A Model Context Protocol (MCP) server for mathematical calculations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.2.0",
+    "sympy>=1.12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+calculator-mcp = "calculator_mcp.server:main"

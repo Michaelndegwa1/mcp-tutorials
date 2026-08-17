@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "calculator": {
+      "command": "python",
+      "args": [
+        "-m",
+        "calculator_mcp.server"
+      ],
+      "env": {
+        "PYTHONPATH": "e:/mcp tutorials"
+      }
+    }
+  }
+}
