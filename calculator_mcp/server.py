@@ -3,6 +3,10 @@
 import sys
 import os
 import argparse
+import logging
+
+logging.getLogger("mcp").setLevel(logging.WARNING)
+logging.getLogger("mcp.server.lowlevel.server").setLevel(logging.WARNING)
 
 # Ensure parent directory is in sys.path for module resolution
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))

@@ -1,8 +1,13 @@
-"""FastMCP Server for NGO Jobs Crawler, Resume Matcher & Application Tracker."""
+"""FastMCP Server for NGO Jobs Crawler, 1000+ NGO Directory & Resume Matcher."""
 
 import os
 import sys
 import argparse
+import logging
+
+# Suppress verbose MCP internal low-level server logs on stderr
+logging.getLogger("mcp").setLevel(logging.WARNING)
+logging.getLogger("mcp.server.lowlevel.server").setLevel(logging.WARNING)
 
 # Ensure current directory is in sys.path
 sys.path.insert(0, os.path.dirname(__file__))
@@ -12,25 +17,52 @@ from crawlers import crawl_all_sources
 from matcher import match_jobs
 from mailer import send_job_digest_email
 from storage import save_application as db_save_application, list_applications as db_list_applications
+from ngo_directory import search_ngo_directory, get_ngo_stats
 
 mcp = FastMCP(
-    "NGO Jobs Crawler & Resume Matcher MCP",
-    instructions="MCP Server for searching NGO job boards (ReliefWeb, UN Jobs, Devex, Idealist), matching resume profiles, emailing shortlists, and tracking applications."
+    "NGO Jobs Crawler & 1000+ NGO Directory MCP",
+    instructions="MCP Server for searching 1,000+ international NGOs (USA, EU, UK, Middle East, Global), crawling direct official career portals, resume profile matching, and application tracking."
 )
 
 
 @mcp.tool()
-def search_jobs(query: str = "", sources: list[str] | None = None, limit: int = 25) -> str:
-    """Crawl NGO job boards (ReliefWeb, UN Jobs, Devex, Idealist) and cache listings in database.
+def list_ngos(region: str | None = None, focus_area: str | None = None, search_query: str | None = None, limit: int = 30) -> str:
+    """Browse and filter the curated directory of 1,000+ international NGOs across USA, EU, UK, Middle East, and Global UN.
+    
+    Args:
+        region: Optional region filter ('USA', 'EU', 'UK', 'Middle East', 'Global')
+        focus_area: Optional thematic filter (e.g., 'Humanitarian', 'Health', 'Tech', 'Education', 'Rights')
+        search_query: Search keywords for organization name or headquarters location
+        limit: Max number of NGOs to return (default: 30)
+    """
+    results = search_ngo_directory(region=region, focus_area=focus_area, search_query=search_query, limit=limit)
+    stats = get_ngo_stats()
+    
+    if not results:
+        return f"No NGOs found matching query filters. Total directory count: {stats['total_ngos']} NGOs across regions: {stats['region_counts']}."
+        
+    lines = [f"🌍 NGO Directory Results ({len(results)} shown out of {stats['total_ngos']} total registered):\n"]
+    for ngo in results:
+        lines.append(f"• {ngo['name']} [{ngo['region']}] - HQ: {ngo['country_hq']}")
+        lines.append(f"  Focus: {ngo['focus_area']}")
+        lines.append(f"  Official Careers Portal: {ngo['careers_url']}")
+        lines.append(f"  Overview: {ngo['description']}\n")
+        
+    return "\n".join(lines)
+
+
+@mcp.tool()
+def search_jobs(query: str = "", sources: list[str] | None = None, limit: int = 15) -> str:
+    """Crawl official NGO career portals & job boards (ReliefWeb, UN Jobs, Impactpool, UNICEF, ICRC, WFP, IRC).
     
     Args:
         query: Search keywords (e.g., 'Software', 'Data Analyst', 'Python', 'Information Management')
-        sources: Optional list of sources: ['reliefweb', 'unjobs', 'devex', 'idealist'] (default: all)
-        limit: Number of jobs to fetch per source (default: 25)
+        sources: Optional list of sources: ['reliefweb', 'unjobs', 'impactpool', 'unicef', 'icrc', 'wfp', 'irc', 'direct_ngos'] (default: all)
+        limit: Number of jobs to fetch per source (default: 15)
     """
     res = crawl_all_sources(query=query, sources=sources, limit_per_source=limit)
     if res.get("status") == "success":
-        return f"Successfully crawled job boards for '{query}'. Fetched: {res['total_fetched']}, Saved/Updated: {res['total_saved_or_updated']} jobs across requested sources."
+        return f"Successfully crawled NGO career sites for '{query}'. Fetched: {res['total_fetched']}, Saved/Updated: {res['total_saved_or_updated']} jobs."
     return f"Error crawling job boards: {res.get('error')}"
 
 
@@ -54,9 +86,10 @@ def match_to_resume(top_n: int = 20, include_applied: bool = False, min_score: i
     for idx, j in enumerate(matches, 1):
         work_tag = f"[{j['work_arrangement'].upper()}]"
         elig_tag = f"[{j['eligibility'].upper()}]" if j['eligibility'] == "National Only" else "[INTERNATIONAL]"
+        reg_tag = f"[{j.get('region', 'GLOBAL').upper()}]"
         
         lines.append(f"{idx}. [ID #{j['job_id']}] {j['title']} - {j['organization']}")
-        lines.append(f"   Location: {j['location']} | Work Type: {work_tag} {elig_tag} | Source: {j['source']}")
+        lines.append(f"   Location: {j['location']} | Work Type: {work_tag} {elig_tag} {reg_tag} | Source: {j['source']}")
         lines.append(f"   Score: {j['total_score']}/100 | Fit Note: {j['fit_note']}")
         lines.append(f"   Link: {j['url']}\n")
         
@@ -121,7 +154,7 @@ def list_applications(status: str | None = None) -> str:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="NGO Jobs MCP Server")
+    parser = argparse.ArgumentParser(description="NGO Jobs & Directory MCP Server")
     parser.add_argument(
         "--transport",
         choices=["stdio", "sse"],

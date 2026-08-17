@@ -1,0 +1,362 @@
+[
+  {
+    "id": "ngo_usa_001",
+    "name": "International Rescue Committee (IRC)",
+    "region": "USA",
+    "country_hq": "New York, USA",
+    "focus_area": "Humanitarian & Emergency Response",
+    "careers_url": "https://rescue.html / https://rescue.csod.com/ux/ats/careersite/1/home",
+    "description": "Global humanitarian aid, relief, and development non-governmental organization.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_usa_002",
+    "name": "Mercy Corps",
+    "region": "USA",
+    "country_hq": "Portland, Oregon, USA",
+    "focus_area": "Humanitarian & Development",
+    "careers_url": "https://www.mercycorps.org/careers",
+    "description": "Global humanitarian organization empowering people to survive crises.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_usa_003",
+    "name": "CARE USA",
+    "region": "USA",
+    "country_hq": "Atlanta, Georgia, USA",
+    "focus_area": "Poverty Alleviation & Global Development",
+    "careers_url": "https://www.care.org/careers",
+    "description": "Major international humanitarian agency fighting global poverty.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_usa_004",
+    "name": "FHI 360",
+    "region": "USA",
+    "country_hq": "Durham, North Carolina, USA",
+    "focus_area": "Health, Education & Human Development",
+    "careers_url": "https://www.fhi360.org/careers",
+    "description": "International non-profit human development organization.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_usa_005",
+    "name": "PATH",
+    "region": "USA",
+    "country_hq": "Seattle, Washington, USA",
+    "focus_area": "Global Health & Tech Innovation",
+    "careers_url": "https://www.path.org/careers",
+    "description": "Global nonprofit organization accelerating health equity through innovation.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_usa_006",
+    "name": "Catholic Relief Services (CRS)",
+    "region": "USA",
+    "country_hq": "Baltimore, Maryland, USA",
+    "focus_area": "Humanitarian Relief & Development",
+    "careers_url": "https://www.crs.org/about/careers",
+    "description": "International humanitarian agency of the Catholic community in the US.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_usa_007",
+    "name": "World Vision US",
+    "region": "USA",
+    "country_hq": "Federal Way, Washington, USA",
+    "focus_area": "Child Sponsorship & Humanitarian Relief",
+    "careers_url": "https://www.worldvision.org/about-us/careers",
+    "description": "Global Christian humanitarian organization advocating for children.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_usa_008",
+    "name": "The Carter Center",
+    "region": "USA",
+    "country_hq": "Atlanta, Georgia, USA",
+    "focus_area": "Human Rights & Global Health",
+    "careers_url": "https://www.cartercenter.org/about/careers",
+    "description": "Nongovernmental organization founded by former US President Jimmy Carter.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_usa_009",
+    "name": "Relief International",
+    "region": "USA",
+    "country_hq": "Washington DC, USA",
+    "focus_area": "Fragile Settings & Emergency Response",
+    "careers_url": "https://www.ri.org/careers",
+    "description": "Nonprofit organization partnering with communities in fragile settings.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_usa_010",
+    "name": "Chemonics International",
+    "region": "USA",
+    "country_hq": "Washington DC, USA",
+    "focus_area": "International Development & USAID Contracting",
+    "careers_url": "https://chemonics.com/careers",
+    "description": "International development consulting firm partnering on global challenges.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_eu_001",
+    "name": "International Committee of the Red Cross (ICRC)",
+    "region": "EU",
+    "country_hq": "Geneva, Switzerland",
+    "focus_area": "Humanitarian Protection & Conflict Assistance",
+    "careers_url": "https://careers.icrc.org",
+    "description": "Impartial, neutral and independent humanitarian organisation.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_eu_002",
+    "name": "Médecins Sans Frontières (MSF / Doctors Without Borders)",
+    "region": "EU",
+    "country_hq": "Geneva, Switzerland / Paris, France",
+    "focus_area": "Medical Humanitarian Action",
+    "careers_url": "https://www.msf.org/work-msf",
+    "description": "International medical humanitarian organisation.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_eu_003",
+    "name": "Norwegian Refugee Council (NRC)",
+    "region": "EU",
+    "country_hq": "Oslo, Norway",
+    "focus_area": "Displaced Persons & Rights",
+    "careers_url": "https://www.nrc.no/careers",
+    "description": "Independent humanitarian organisation helping displaced people.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_eu_004",
+    "name": "Danish Refugee Council (DRC)",
+    "region": "EU",
+    "country_hq": "Copenhagen, Denmark",
+    "focus_area": "Refugee Protection & Peacebuilding",
+    "careers_url": "https://drc.ngo/about-us/careers",
+    "description": "Leading international humanitarian refugee organization.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_eu_005",
+    "name": "ACTED",
+    "region": "EU",
+    "country_hq": "Paris, France",
+    "focus_area": "Emergency Response & 3ZERO Development",
+    "careers_url": "https://www.acted.org/en/jobs",
+    "description": "French non-governmental humanitarian organization.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_eu_006",
+    "name": "Action Against Hunger (ACF)",
+    "region": "EU",
+    "country_hq": "Paris, France / Madrid, Spain",
+    "focus_area": "Malnutrition & Water Sanitation",
+    "careers_url": "https://www.actionagainsthunger.org/careers",
+    "description": "Global humanitarian organization committed to ending world hunger.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_eu_007",
+    "name": "Humanity & Inclusion (Handicap International)",
+    "region": "EU",
+    "country_hq": "Lyon, France / Brussels, Belgium",
+    "focus_area": "Disability Inclusion & Rehabilitation",
+    "careers_url": "https://www.hi.org/en/jobs",
+    "description": "Independent charity working in situations of poverty and conflict.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_eu_008",
+    "name": "Helvetas Swiss Intercooperation",
+    "region": "EU",
+    "country_hq": "Zurich, Switzerland",
+    "focus_area": "Water, Infrastructure & Climate Change",
+    "careers_url": "https://www.helvetas.org/en/switzerland/who-we-are/jobs",
+    "description": "Swiss organization for development and humanitarian response.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_uk_001",
+    "name": "Save the Children UK",
+    "region": "UK",
+    "country_hq": "London, UK",
+    "focus_area": "Child Rights & Humanitarian Aid",
+    "careers_url": "https://www.savethechildren.org.uk/about-us/jobs",
+    "description": "Leading UK charity fighting for children's rights worldwide.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_uk_002",
+    "name": "Oxfam GB / Oxfam International",
+    "region": "UK",
+    "country_hq": "Oxford, UK",
+    "focus_area": "Poverty Eradication & Climate Justice",
+    "careers_url": "https://jobs.oxfam.org.uk",
+    "description": "Global movement of people working together to end poverty.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_uk_003",
+    "name": "Amnesty International",
+    "region": "UK",
+    "country_hq": "London, UK",
+    "focus_area": "Human Rights & Legal Advocacy",
+    "careers_url": "https://www.amnesty.org/en/careers",
+    "description": "Global movement campaigning for human rights worldwide.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_uk_004",
+    "name": "Islamic Relief Worldwide",
+    "region": "UK",
+    "country_hq": "Birmingham, UK",
+    "focus_area": "Humanitarian Relief & Sustainable Development",
+    "careers_url": "https://www.islamic-relief.org/careers",
+    "description": "Independent international aid and development charity.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_uk_005",
+    "name": "Christian Aid",
+    "region": "UK",
+    "country_hq": "London, UK",
+    "focus_area": "Poverty Alleviation & Climate Action",
+    "careers_url": "https://www.christianaid.org.uk/jobs",
+    "description": "Official relief and development agency of 41 Christian churches in the UK.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_uk_006",
+    "name": "WaterAid UK",
+    "region": "UK",
+    "country_hq": "London, UK",
+    "focus_area": "Clean Water, Sanitation & Hygiene",
+    "careers_url": "https://www.wateraid.org/uk/jobs",
+    "description": "International non-governmental organization focused on water sanitation.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_uk_007",
+    "name": "International Institute for Environment and Development (IIED)",
+    "region": "UK",
+    "country_hq": "London, UK",
+    "focus_area": "Environmental Policy & Sustainable Development",
+    "careers_url": "https://www.iied.org/work-for-us",
+    "description": "Policy and action research organisation promoting sustainable development.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_me_001",
+    "name": "Qatar Charity",
+    "region": "Middle East",
+    "country_hq": "Doha, Qatar",
+    "focus_area": "Humanitarian Relief, Health & Education",
+    "careers_url": "https://www.qcharity.org/en/qa/careers",
+    "description": "Leading Middle Eastern non-governmental organization providing aid worldwide.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_me_002",
+    "name": "King Salman Humanitarian Aid & Relief Centre (KSrelief)",
+    "region": "Middle East",
+    "country_hq": "Riyadh, Saudi Arabia",
+    "focus_area": "Global Humanitarian Assistance & Food Security",
+    "careers_url": "https://www.ksrelief.org",
+    "description": "International relief centre executing global humanitarian projects.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_me_003",
+    "name": "Taawon (Welfare Association)",
+    "region": "Middle East",
+    "country_hq": "Amman, Jordan / Jerusalem",
+    "focus_area": "Education, Health & Community Development",
+    "careers_url": "https://www.taawon.org/en/careers",
+    "description": "Independent non-profit organization supporting Palestinian development.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_me_004",
+    "name": "Emirates Red Crescent",
+    "region": "Middle East",
+    "country_hq": "Abu Dhabi, UAE",
+    "focus_area": "Disaster Relief & Medical Assistance",
+    "careers_url": "https://www.emiratesrc.ae/en",
+    "description": "UAE humanitarian organization helping vulnerable communities globally.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_me_005",
+    "name": "Jordan Hashemite Charity Organization (JHCO)",
+    "region": "Middle East",
+    "country_hq": "Amman, Jordan",
+    "focus_area": "Emergency Aid & Regional Relief",
+    "careers_url": "http://www.jhco.org.jo",
+    "description": "National non-profit organization conducting humanitarian relief across the Middle East.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_me_006",
+    "name": "Dubai Cares",
+    "region": "Middle East",
+    "country_hq": "Dubai, UAE",
+    "focus_area": "Global Youth Education & Empowerment",
+    "careers_url": "https://www.dubaicares.ae/en/careers",
+    "description": "UAE-based global philanthropic organization working to provide quality education.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_global_001",
+    "name": "UNICEF (United Nations Children's Fund)",
+    "region": "Global",
+    "country_hq": "New York, USA / Worldwide",
+    "focus_area": "Child Protection & International Development",
+    "careers_url": "https://jobs.unicef.org",
+    "description": "United Nations agency responsible for providing humanitarian and developmental aid to children.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_global_002",
+    "name": "World Food Programme (WFP)",
+    "region": "Global",
+    "country_hq": "Rome, Italy / Worldwide",
+    "focus_area": "Food Security & Logistics",
+    "careers_url": "https://worldfoodprogramme.careers",
+    "description": "World's largest humanitarian organization addressing hunger and promoting food security.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_global_003",
+    "name": "United Nations Development Programme (UNDP)",
+    "region": "Global",
+    "country_hq": "New York, USA / Worldwide",
+    "focus_area": "Sustainable Development & Governance",
+    "careers_url": "https://jobs.undp.org",
+    "description": "United Nations organization promoting poverty eradication and sustainable growth.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_global_004",
+    "name": "World Health Organization (WHO)",
+    "region": "Global",
+    "country_hq": "Geneva, Switzerland / Worldwide",
+    "focus_area": "Public Health & Disease Prevention",
+    "careers_url": "https://careers.who.int",
+    "description": "Specialized agency of the United Nations responsible for international public health.",
+    "is_direct_supported": true
+  },
+  {
+    "id": "ngo_global_005",
+    "name": "UNHCR (UN Refugee Agency)",
+    "region": "Global",
+    "country_hq": "Geneva, Switzerland / Worldwide",
+    "focus_area": "Refugee Protection & Human Rights",
+    "careers_url": "https://www.unhcr.org/careers",
+    "description": "UN agency mandated to aid and protect refugees and displaced communities.",
+    "is_direct_supported": true
+  }
+]
